@@ -1,0 +1,181 @@
+/* Palet Warna: 
+   - Primary: #6c5ce7 (Ungu)
+   - Accent: #00b894 (Hijau Tosca)
+   - Background: #f7f9fc (Putih keabu-abuan)
+*/
+
+body {
+    font-family: 'Poppins', sans-serif; /* Ganti font */
+    background-color: #f7f9fc;
+    color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ubah dari center agar konten tidak terlalu ke tengah */
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* Shadow yang lebih modern */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+    width: 100%;
+    max-width: 550px;
+    transition: all 0.3s;
+}
+
+h1 {
+    text-align: center;
+    color: #6c5ce7; /* Warna ungu */
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+h1 .fas {
+    margin-right: 10px;
+}
+
+/* Form Styling */
+#todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#todo-input, #date-input {
+    padding: 12px;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    flex-grow: 1;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#todo-input:focus, #date-input:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.3);
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #6c5ce7; /* Warna ungu */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background-color: #5b46d1;
+    transform: translateY(-1px);
+}
+
+button[type="submit"] .fas {
+    margin-right: 5px;
+}
+
+/* Filter Styling */
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+#filter-select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dfe6e9;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* List Styling */
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f0f4f7; /* Background list yang lebih cerah */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    border-left: 5px solid #6c5ce7; /* Garis indikator */
+}
+
+#todo-list li:hover {
+    background-color: #e8ecf0;
+    transform: translateY(-1px);
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 15px;
+    word-break: break-word;
+    cursor: pointer;
+}
+
+/* Styling untuk task yang sudah selesai */
+.completed {
+    border-left: 5px solid #00b894 !important; /* Hijau Tosca untuk Selesai */
+    background-color: #e0f7f3 !important; /* Latar belakang lebih terang untuk selesai */
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background-color: #ff7675; /* Merah Muda */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #e15f60;
+}
+/* ==========================================================
+   Footer (Copyright) Styling - Opsi FIXED
+   ========================================================== */
+.footer {
+    position: fixed; /* Membuatnya tetap di tempat saat di-scroll */
+    bottom: 0;       /* Menempelkannya ke bagian bawah layar */
+    left: 0;
+    width: 100%;     /* Memastikan lebar 100% */
+    background-color: #f7f9fc; /* Gunakan warna latar belakang body */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 13px;
+    color: #95a5a6;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Bayangan tipis di atas */
+    z-index: 100; /* Pastikan ia berada di atas elemen lain */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Penting! Tambahkan padding ke body agar konten tidak tertutup footer */
+body {
+    /* ... kode body yang sudah ada ... */
+    padding-bottom: 50px; /* Tambahkan ruang di bagian bawah seukuran footer */
+}
