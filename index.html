@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wan'z To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-clipboard-list"></i> Wan'z To-Do List</h1>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Apa yang perlu dilakukan hari ini?" required>
+            <input type="date" id="date-input">
+            <button type="submit"><i class="fas fa-plus"></i> Submit</button>
+        </form>
+
+        <div class="filter-controls">
+            <label for="filter-select"><i class="fas fa-filter"></i> Filter</label>
+            <select id="filter-select">
+                <option value="all">Semua</option>
+                <option value="pending">Belum Selesai</option>
+                <option value="completed">Selesai</option>
+            </select>
+        </div>
+
+        <ul id="todo-list">
+            </ul>
+        
+        <p id="empty-message" class="hidden">Hore! Tidak ada tugas saat ini.</p>
+    </div>
+     </div> <footer class="footer">
+        <p>&copy; 2025 Coded by wan'z</p>
+    </footer>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
